@@ -1,0 +1,53 @@
+/* This will effect everything from 0 to 576px */
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+
+}
+body{
+    font-size: 1.6rem;
+}
+
+.skip-navigation{
+    font-size: 1rem;
+    padding: 1.5em;
+    color: red;
+    outline: 1px solid black;
+    opacity:0;
+}
+.skip-navigation:focus{
+    opacity:1;
+}
+.nav{
+    display: flex;
+    gap: 1rem;
+}
+.nav__links{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    display: none;
+}
+.nav__links li{
+    list-style: none;
+}
+.nav__links a{
+    text-decoration: none;
+}
+
+body::before{
+}
+
+
+/* Media Queries */
+@media (min-width: 576px) /* for mobile */{}
+@media (min-width:768px) /* for tablets */{}
+@media (min-width: 992px) /* for laptops */{
+    .nav__links{
+        display: flex;
+    }
+}
+@media (min-width: 1200px) /* for large devices */{}
